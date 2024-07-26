@@ -1,4 +1,4 @@
-"user server";
+"use server";
 
 import { lucia, validateRequest } from "@/auth";
 import { redirect } from "next/navigation";
