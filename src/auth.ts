@@ -4,8 +4,25 @@ import { Lucia, Session, User } from "lucia";
 import { cache } from "react";
 import { cookies } from "next/headers";
 
+/**
+ * Creates a new PrismaAdapter instance with the provided session and user objects from Prisma.
+ * @param {Prisma.Session} session - The session object from Prisma.
+ * @param {Prisma.User} user - The user object from Prisma.
+ * @returns {PrismaAdapter} A new instance of PrismaAdapter.
+ */
 const adapter = new PrismaAdapter(prisma.session, prisma.user);
 
+/**
+ * Creates a new instance of Lucia with the provided adapter and configuration options.
+ * @param {Adapter} adapter - The adapter to use with Lucia.
+ * @param {Object} options - The configuration options for Lucia.
+ * @param {Object} options.sessionCookie - Configuration for the session cookie.
+ * @param {boolean} options.sessionCookie.expires - Whether the session cookie expires.
+ * @param {Object} options.sessionCookie.attributes - Additional attributes for the session cookie.
+ * @param {boolean} options.sessionCookie.attributes.secure - Whether the session cookie is secure.
+ * @param {Function} options.getUserAttributes - A function that returns user attributes based on database user attributes.
+ * @returns A new instance of Lucia.
+ */
 export const lucia = new Lucia(adapter, {
   sessionCookie: {
     expires: false,
@@ -24,6 +41,10 @@ export const lucia = new Lucia(adapter, {
   },
 });
 
+/**
+ * Validates a request by checking the session ID and creating session cookies if needed.
+ * @returns A promise that resolves to an object containing either the user and session or null values.
+ */
 declare module "lucia" {
   interface Register {
     Lucia: typeof lucia;

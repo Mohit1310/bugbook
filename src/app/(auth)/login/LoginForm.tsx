@@ -17,6 +17,13 @@ import { login } from "./actions";
 import { PasswordInput } from "@/components/PasswordInput";
 import LoadingButton from "@/components/LoadingButton";
 
+/**
+ * LoginForm component is responsible for handling the login form submission.
+ * It uses the `useForm` hook from `react-hook-form` to manage the form state and validation.
+ * The `onSubmit` function is called when the form is submitted, and it uses the `login` action to attempt the login.
+ * If an error occurs during the login process, it sets the error message and displays it to the user.
+ * @returns {JSX.Element} The LoginForm component.
+ */
 export default function LoginForm() {
   const [error, setError] = useState<string>();
 

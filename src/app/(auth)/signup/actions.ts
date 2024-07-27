@@ -9,6 +9,12 @@ import { isRedirectError } from "next/dist/client/components/redirect";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
+/**
+ * Sign up a new user with the provided credentials.
+ * @param {SignupValues} credentials - The user's signup credentials including username, email, and password.
+ * @returns {Promise<{ error: string }>} A promise that resolves with an error message if there was an issue during sign up.
+ * @throws {Error} Throws an error if there was an issue during sign up.
+ */
 export async function signUp(
   credentials: SignupValues,
 ): Promise<{ error: string }> {

@@ -5,6 +5,12 @@ import { PostData } from "@/lib/types";
 import { useQuery } from "@tanstack/react-query";
 import { Loader2 } from "lucide-react";
 
+/**
+ * Component that displays a feed of posts for the user.
+ * It fetches the posts for the "For You" feed using an API call.
+ * @returns JSX element that renders the feed of posts.
+ */
+
 export default function ForYouFeed() {
   const query = useQuery<PostData[]>({
     queryKey: ["post-feed", "for-you"],

@@ -8,6 +8,12 @@ import { lucia } from "@/auth";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
+/**
+ * Logs in a user with the provided credentials.
+ * @param {LoginValues} credentials - The login credentials containing username and password.
+ * @returns {Promise<{ error: string }>} An object with an error message if login fails.
+ * @throws {Error} If an unexpected error occurs during the login process.
+ */
 export async function login(
   credentials: LoginValues,
 ): Promise<{ error: string }> {

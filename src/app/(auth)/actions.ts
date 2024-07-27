@@ -4,6 +4,10 @@ import { lucia, validateRequest } from "@/auth";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 
+/**
+ * Logs out the current user by invalidating the session and redirecting to the login page.
+ * @returns None
+ */
 export async function logout() {
   const { session } = await validateRequest();
 

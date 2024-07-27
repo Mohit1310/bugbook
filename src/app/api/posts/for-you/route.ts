@@ -2,6 +2,11 @@ import { validateRequest } from "@/auth";
 import prisma from "@/lib/prisma";
 import { postDataInclude } from "@/lib/types";
 
+/**
+ * Handles a GET request by validating the request, checking user authentication,
+ * and returning a list of posts in descending order of creation date.
+ * @returns {Promise} A Promise that resolves with the list of posts or an error response.
+ */
 export async function GET() {
   try {
     const { user } = await validateRequest();

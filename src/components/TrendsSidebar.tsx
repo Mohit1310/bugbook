@@ -20,6 +20,11 @@ export default function TrendsSidebar() {
   );
 }
 
+/**
+ * Asynchronously fetches a list of users to follow and renders a component displaying
+ * their information and a follow button.
+ * @returns JSX element representing the component to display users to follow.
+ */
 async function WhoToFollow() {
   const { user } = await validateRequest();
   if (!user) return null;
@@ -61,6 +66,10 @@ async function WhoToFollow() {
   );
 }
 
+/**
+ * Retrieves the top trending topics by counting the occurrences of hashtags in posts.
+ * @returns An array of objects containing the trending hashtag and its count.
+ */
 const getTrendingTopics = unstable_cache(
   async () => {
     const result = await prisma.$queryRaw<{ hashtag: string; count: bigint }[]>`

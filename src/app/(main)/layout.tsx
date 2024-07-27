@@ -4,6 +4,13 @@ import SessionProvider from "./SessionProvider";
 import Navbar from "./Navbar";
 import MenuBar from "./MenuBar";
 
+/**
+ * Layout component that wraps the main content of the application.
+ * It ensures that the user is authenticated and provides a consistent layout structure.
+ *
+ * @param {React.ReactNode} children - The main content to be displayed within the layout.
+ * @returns {JSX.Element} - The rendered layout component with the provided children.
+ */
 export default async function Layout({
   children,
 }: {
