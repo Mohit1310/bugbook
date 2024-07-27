@@ -25,7 +25,7 @@ model User {
   avatarUrl    String?
   bio          String?
   sessions     Session[]
-  posts        Posts[]
+  posts        Post[]
 
   createdAt DateTime @default(now())
 
@@ -41,7 +41,7 @@ model Session {
   @@map("sessions")
 }
 
-model Posts {
+model Post {
   id        String   @id @default(cuid())
   content   String
   userId    String

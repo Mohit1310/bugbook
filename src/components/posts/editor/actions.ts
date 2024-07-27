@@ -11,7 +11,7 @@ export async function submitPost(input: string) {
 
   const { content } = createPostSchema.parse({ content: input });
 
-  await prisma.posts.create({
+  await prisma.post.create({
     data: {
       content,
       userId: user.id,
