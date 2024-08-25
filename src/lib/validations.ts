@@ -30,3 +30,7 @@ export const updateUserProfileSchema = z.object({
 });
 
 export type UpdateUserProfileValues = z.infer<typeof updateUserProfileSchema>;
+
+export const createCommentsSchema = z.object({
+  content: requiredString,
+});
