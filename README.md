@@ -16,6 +16,16 @@
 
 bugbook is a modern, Twitter-inspired social media platform built with Next.js and React. It allows users to share short messages, follow other users, and engage with content through likes and comments.
 
+## Screenshots
+![image](https://github.com/user-attachments/assets/6c15358b-3a10-4119-a778-20b55c536a3d)
+![image](https://github.com/user-attachments/assets/70c97342-e6b0-4ea4-b106-f6636b04b61a)
+![image](https://github.com/user-attachments/assets/abcb6dbb-3d7a-42ba-ace2-ed24c7cb2253)
+![image](https://github.com/user-attachments/assets/89807f49-d9f9-474e-87d8-7809cea7f377)
+![image](https://github.com/user-attachments/assets/e3f20c84-b391-4945-bd4a-4aba5879c0bd)
+![image](https://github.com/user-attachments/assets/8329f994-d599-403d-893f-9211dccd2dd4)
+![image](https://github.com/user-attachments/assets/d667ec95-e858-4bbb-a18d-054f8d593c69)
+![image](https://github.com/user-attachments/assets/dc086150-7681-4572-a747-3c782e8370b7)
+
 ## Features
 
 - User authentication and authorization
